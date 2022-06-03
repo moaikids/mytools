@@ -1,0 +1,6 @@
+DIR=$(ghq list -p | fzf --reverse --exact)
+
+if [ -n "${DIR}" ]; then
+  cd ${DIR}
+  exec /bin/zsh
+fi
